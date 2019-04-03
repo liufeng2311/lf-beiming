@@ -23,7 +23,7 @@ public class RegisterServiceImpl implements RegisterService{
     User user = new User();
     user.setLoginName(registerRequest.getName());
     List<User> select = userMapper.select(user);
-    AssertUtils.assertFalse(select.size() > 0, ExceptionEnum.USER_NOT_EXIST, "用户名已存在");
+    AssertUtils.assertFalse(select.size() > 0, ExceptionEnum.USER_HAS_EXIST, "用户名已存在");
     if (registerRequest.getPassword().equals(registerRequest.getPassword1())) {
       String md5 = EncyptUtils.md5(registerRequest.getPassword());
       user.setPassword(md5);
@@ -31,7 +31,7 @@ public class RegisterServiceImpl implements RegisterService{
     user.setCreateTime(new Date());
     user.setVersion(0);
     int conut = userMapper.insertSelective(user);
-    AssertUtils.assertFalse(conut == 0, ExceptionEnum.USER_NOT_EXIST, "注册失败");
+    AssertUtils.assertFalse(conut == 0, ExceptionEnum.USER_HAS_EXIST, "注册失败");
     return user;
   }
 

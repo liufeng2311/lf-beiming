@@ -24,6 +24,11 @@ public class UserException extends Exception implements ExceptionInterface{
   public Integer getCode() {
     return this.exception.getCode();
   }
+  
+  @Override
+  public String getMessage() {
+    return this.exception.getMessage();
+  }
 
   @Override
   public ExceptionInterface setMeaasge(String message) {

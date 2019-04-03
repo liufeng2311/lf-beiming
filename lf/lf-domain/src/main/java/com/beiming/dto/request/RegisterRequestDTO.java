@@ -20,10 +20,10 @@ public class RegisterRequestDTO {
 	private String password;
 	
 	@ApiModelProperty(value="确认密码",required=true)
-	@NotNull(message="确认不能为空")
+	@NotNull(message="确认密码不能为空")
 	private String password1;
 	
 	@ApiModelProperty(value="短信验证码",required=false) //短信验证
-	@NotNull(message="验证码不能为空")
+	//@NotNull(message="验证码不能为空")
 	private String verifyCode;
 }

@@ -13,7 +13,7 @@ public class ResultModel implements Serializable{
 
   private String message;//各个状态码对应的具体错误信息
 
-  private Object date;//成功时返回数据，失败时置空
+  private Object data;//成功时返回数据，失败时置空
 
   /**
    * 成功时调用的方法
@@ -24,7 +24,7 @@ public class ResultModel implements Serializable{
     ResultModel type =new ResultModel();
     type.setCode(ExceptionEnum.SUCCESS.getCode());
     type.setMessage(ExceptionEnum.SUCCESS.getMessage());
-    type.setDate(result);
+    type.setData(result);
     return type;
   }
 

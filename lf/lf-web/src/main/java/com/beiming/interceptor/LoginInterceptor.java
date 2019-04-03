@@ -12,8 +12,8 @@ public class LoginInterceptor implements HandlerInterceptor{
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
       throws Exception {
-    logger.debug("===========================进入拦截器=========================");
-    return false;
+    logger.info("===========================进入拦截器,目前先不做任何处理=========================");
+    return true;
   }
   
 }
