@@ -19,11 +19,6 @@
 			<groupId>javax.persistence</groupId>
 			<artifactId>persistence-api</artifactId>
 		</dependency>
-		<!--JSON需要的依赖 -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-		</dependency>
 		<!--字段验证转换需要的依赖 -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

@@ -23,7 +23,7 @@ public class RegisterRequestDTO {
 	@NotNull(message="确认不能为空")
 	private String password1;
 	
-	@ApiModelProperty(value="短信验证码",required=true) //短信验证
+	@ApiModelProperty(value="短信验证码",required=false) //短信验证
 	@NotNull(message="验证码不能为空")
 	private String verifyCode;
 }

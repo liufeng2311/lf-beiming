@@ -3,7 +3,9 @@ package com.beiming.enums;
 import com.beiming.exception.ExceptionInterface;
 
 public enum ExceptionEnum implements ExceptionInterface{
-  UNKNOW_ERROR(-1,"未知错误"),            
+  UNKNOW_ERROR(-1,"未知错误"), 
+  
+  USER_NOT_EXIST(10001,"用户名已存在"),
 
   SUCCESS(0,"访问成功"), 
   ;

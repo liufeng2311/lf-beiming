@@ -1,6 +1,8 @@
 package com.beiming.handler;
 
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -25,6 +27,7 @@ public class ExceptionsHandler {
   //private final static Logger logger =LoggerFactory.getLogger(ExceptionsHandler.class); 
   @ExceptionHandler(value=Exception.class)      //规定需要拦截的异常
   public Object handlerException(Exception exception) {
+    exception.printStackTrace();
     if(exception instanceof UserException) {  //判断异常是否属于我们自定义的异常，是的话就获取异常信息并输出
       UserException business=(UserException)exception;
       ResultModel result = ResultModel.faile(null, business.getMessage(), business.getCode());
@@ -41,6 +44,7 @@ public class ExceptionsHandler {
 
     }else {
       ResultModel result = ResultModel.faile(null, ExceptionEnum.UNKNOW_ERROR.getMessage(), ExceptionEnum.UNKNOW_ERROR.getCode());
+      exception.printStackTrace();
       return result;
     }
   }

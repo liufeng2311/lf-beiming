@@ -1,4 +1,4 @@
-package com.beiming.security;
+package com.beiming.util;
 
 import java.security.Key;
 import java.util.Calendar;
@@ -6,9 +6,7 @@ import java.util.Date;
 import javax.crypto.spec.SecretKeySpec;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.alibaba.fastjson.JSONObject;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtBuilder;

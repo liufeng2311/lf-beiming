@@ -1,7 +1,8 @@
 package com.beiming.login;
 
-import com.alibaba.fastjson.JSONObject;
 import com.beiming.dto.request.RegisterRequestDTO;
+import com.beiming.entity.User;
+import com.beiming.exception.UserException;
 
 public interface RegisterService {
 	/**
@@ -9,5 +10,5 @@ public interface RegisterService {
 	 * @param RegisterRequest
 	 * @return
 	 */
-	JSONObject register(RegisterRequestDTO RegisterRequest);
+	User register(RegisterRequestDTO RegisterRequest) throws UserException;
 }
