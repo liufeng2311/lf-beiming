@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import com.beiming.dto.request.LoginRequestDTO;
 import com.beiming.dto.request.RegisterRequestDTO;
 import com.beiming.login.RegisterService;
 import com.beiming.util.ResultModel;
@@ -26,5 +27,11 @@ public class LoginController {
   @RequestMapping(value="/register",method=RequestMethod.POST)
   public ResultModel register(@RequestBody @Validated RegisterRequestDTO RegisterRequest) throws Exception {
     return ResultModel.success(registerService.register(RegisterRequest));
+  }
+  
+  @ApiOperation(value="用户登录",notes="用户登录")
+  @RequestMapping(value="/login",method=RequestMethod.POST)
+  public ResultModel login(@RequestBody @Validated LoginRequestDTO LoginRequestDTO) throws Exception {
+    return ResultModel.success(registerService.login(LoginRequestDTO));
   }
 }

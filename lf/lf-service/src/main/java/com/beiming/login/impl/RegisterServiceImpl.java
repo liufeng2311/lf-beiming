@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.beiming.dto.request.LoginRequestDTO;
 import com.beiming.dto.request.RegisterRequestDTO;
 import com.beiming.entity.User;
 import com.beiming.enums.ExceptionEnum;
@@ -18,6 +19,7 @@ public class RegisterServiceImpl implements RegisterService{
 
   @Autowired
   private UserMapper userMapper;
+  
   @Override
   public User register(RegisterRequestDTO registerRequest) throws UserException {
     User user = new User();
@@ -31,8 +33,20 @@ public class RegisterServiceImpl implements RegisterService{
     user.setCreateTime(new Date());
     user.setVersion(0);
     int conut = userMapper.insertSelective(user);
-    AssertUtils.assertFalse(conut == 0, ExceptionEnum.USER_HAS_EXIST, "注册失败");
+    AssertUtils.assertFalse(conut == 0, ExceptionEnum.REGISTER_FAILE, "注册失败");
     return user;
+  }
+  
+  @Override
+  public User login(LoginRequestDTO loginRequestDTO) throws UserException {
+    User user = new User();
+    user.setLoginName(loginRequestDTO.getName());
+    List<User> select = userMapper.select(user);
+    AssertUtils.assertFalse(select.size() == 0, ExceptionEnum.USER_NOT_EXIST, "用户未注册");
+    if (select.get(0).getPassword().equals(EncyptUtils.md5(loginRequestDTO.getPassword()))) {
+      //获取用户的其他信息
+    }
+    return select.get(0);
   }
 
 }

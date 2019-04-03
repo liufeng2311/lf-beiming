@@ -9,4 +9,4 @@
 HELP.md
 /target/
 .mvn/wrapper/*
-/target/*
+/**/target/

@@ -6,6 +6,10 @@ public enum ExceptionEnum implements ExceptionInterface{
   UNKNOW_ERROR(-1,"未知错误"), 
   
   USER_HAS_EXIST(10001,"用户名已存在"),
+  
+  USER_NOT_EXIST(10001,"用户名未注册"),
+  
+  REGISTER_FAILE(10001,"注册失败"),
 
   SUCCESS(200,"SUCESS"), 
   ;

@@ -7,8 +7,9 @@
 .springBeans
 .sts4-cache
 HELP.md
-/target/
+lf/target/
 .mvn/wrapper/*
 /**/target/**
 pom.properties
 /**/.class
+/**/target/
