@@ -10,3 +10,5 @@ HELP.md
 /target/
 .mvn/wrapper/*
 /**/target/**
+pom.properties
+/**/.class
