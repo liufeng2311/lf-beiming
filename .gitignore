@@ -11,5 +11,5 @@ lf/target/
 .mvn/wrapper/*
 /**/target/**
 pom.properties
-/**/.class
-/**/target/
+*.class
+/lf/*/target/
