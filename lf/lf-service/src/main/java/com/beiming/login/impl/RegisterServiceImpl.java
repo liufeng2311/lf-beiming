@@ -21,7 +21,7 @@ public class RegisterServiceImpl implements RegisterService{
   private UserMapper userMapper;
   
   @Override
-  public User register(RegisterRequestDTO registerRequest) throws UserException {
+  public User register(RegisterRequestDTO registerRequest){
     User user = new User();
     user.setLoginName(registerRequest.getName());
     List<User> select = userMapper.select(user);
@@ -38,7 +38,7 @@ public class RegisterServiceImpl implements RegisterService{
   }
   
   @Override
-  public User login(LoginRequestDTO loginRequestDTO) throws UserException {
+  public User login(LoginRequestDTO loginRequestDTO){
     User user = new User();
     user.setLoginName(loginRequestDTO.getName());
     List<User> select = userMapper.select(user);

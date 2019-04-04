@@ -25,13 +25,13 @@ public class LoginController {
   
   @ApiOperation(value="用户注册",notes="用户注册")
   @RequestMapping(value="/register",method=RequestMethod.POST)
-  public ResultModel register(@RequestBody @Validated RegisterRequestDTO RegisterRequest) throws Exception {
+  public ResultModel register(@RequestBody @Validated RegisterRequestDTO RegisterRequest){
     return ResultModel.success(registerService.register(RegisterRequest));
   }
   
   @ApiOperation(value="用户登录",notes="用户登录")
   @RequestMapping(value="/login",method=RequestMethod.POST)
-  public ResultModel login(@RequestBody @Validated LoginRequestDTO LoginRequestDTO) throws Exception {
+  public ResultModel login(@RequestBody @Validated LoginRequestDTO LoginRequestDTO){
     return ResultModel.success(registerService.login(LoginRequestDTO));
   }
 }

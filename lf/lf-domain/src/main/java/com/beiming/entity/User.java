@@ -12,6 +12,10 @@ import lombok.EqualsAndHashCode;
 @Table(name="user")
 public class User extends BaseEntity{
   /**
+   * 
+   */
+  private static final long serialVersionUID = -1656304971568235413L;
+  /**
    * 用户名
    */
   private String loginName;

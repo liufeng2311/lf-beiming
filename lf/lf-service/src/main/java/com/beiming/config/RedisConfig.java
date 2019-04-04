@@ -1,14 +1,20 @@
 package com.beiming.config;
 
+import java.time.Duration;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.cache.RedisCacheWriter;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-
+import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,7 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @JsonAutoDetect
 @SuppressWarnings({"rawtypes","unchecked"})
 public class RedisConfig {
-	@Bean
+/*	@Bean
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(connectionFactory);
@@ -36,11 +42,32 @@ public class RedisConfig {
         template.setKeySerializer(new StringRedisSerializer());
         template.afterPropertiesSet();
         return template;
-    }
+    }*/
+  @Bean
+  public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+      RedisTemplate<String, Object> redisTemplate = new RedisTemplate();
+      redisTemplate.setConnectionFactory(redisConnectionFactory);
+      FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer(Object.class);
+      ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+      redisTemplate.setValueSerializer(fastJsonRedisSerializer);
+      redisTemplate.setHashValueSerializer(fastJsonRedisSerializer);
+      redisTemplate.setKeySerializer(new StringRedisSerializer());
+      redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+      redisTemplate.afterPropertiesSet();
+      return redisTemplate;
+  }
     @Bean
     public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory factory) {
         StringRedisTemplate stringRedisTemplate = new StringRedisTemplate();
         stringRedisTemplate.setConnectionFactory(factory);
         return stringRedisTemplate;
+    }
+    @Bean(value="lf")
+    public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
+        RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
+                .entryTtl(Duration.ofMinutes(30)); // 设置缓存有效期一小时
+        return RedisCacheManager
+                .builder(RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory))
+                .cacheDefaults(redisCacheConfiguration).build();
     }
 }

@@ -12,7 +12,7 @@ public interface RegisterService {
 	 * @return
 	 * @throws UserException
 	 */
-	User register(RegisterRequestDTO RegisterRequest) throws UserException;
+	User register(RegisterRequestDTO RegisterRequest);
 	
 	/**
 	 * 用户登录
@@ -20,5 +20,5 @@ public interface RegisterService {
 	 * @return
 	 * @throws UserException
 	 */
-	User login(LoginRequestDTO loginRequestDTO) throws UserException; 
+	User login(LoginRequestDTO loginRequestDTO); 
 }

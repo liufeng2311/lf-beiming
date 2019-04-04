@@ -1,5 +1,6 @@
 package com.beiming.base;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,7 +8,12 @@ import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 @Data
-public class BaseEntity {
+public class BaseEntity implements Serializable{
+  /**
+   * 
+   */
+  private static final long serialVersionUID = -5571061069095354230L;
+
   /**
    * 主键Id
    */

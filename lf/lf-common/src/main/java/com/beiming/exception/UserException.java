@@ -1,7 +1,7 @@
 package com.beiming.exception;
 
 @SuppressWarnings("serial")
-public class UserException extends Exception implements ExceptionInterface{
+public class UserException extends RuntimeException implements ExceptionInterface{
 
   private ExceptionInterface exception;
 
