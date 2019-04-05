@@ -1,4 +1,6 @@
 /.metadata/
+/.mvn/wrapper/*
+/settings/*
 .apt_generated
 .classpath
 .factorypath
@@ -7,9 +9,5 @@
 .springBeans
 .sts4-cache
 HELP.md
-lf/target/
-.mvn/wrapper/*
-/**/target/**
+lf/*/target/
 pom.properties
-*.class
-/lf/*/target/

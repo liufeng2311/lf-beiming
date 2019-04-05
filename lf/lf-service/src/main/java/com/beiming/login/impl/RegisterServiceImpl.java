@@ -8,7 +8,6 @@ import com.beiming.dto.request.LoginRequestDTO;
 import com.beiming.dto.request.RegisterRequestDTO;
 import com.beiming.entity.User;
 import com.beiming.enums.ExceptionEnum;
-import com.beiming.exception.UserException;
 import com.beiming.login.RegisterService;
 import com.beiming.mapper.UserMapper;
 import com.beiming.util.AssertUtils;
