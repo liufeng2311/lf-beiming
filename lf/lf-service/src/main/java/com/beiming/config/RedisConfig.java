@@ -62,7 +62,7 @@ public class RedisConfig {
     @Bean(value="lf")
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
         RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
-                .entryTtl(Duration.ofMinutes(30)); // 设置缓存有效期一小时
+                .entryTtl(Duration.ofMinutes(1)); // 设置缓存有效期一小时
         return RedisCacheManager
                 .builder(RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory))
                 .cacheDefaults(redisCacheConfiguration).build();
