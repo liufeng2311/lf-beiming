@@ -12,6 +12,8 @@ import com.beiming.mapper.UserMapper;
 import com.beiming.user.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import tk.mybatis.mapper.entity.Example;
+import tk.mybatis.mapper.entity.Example.Criteria;
 @Service
 public class UserServiceImpl implements UserService{
 

@@ -34,4 +34,17 @@ public class LoginController {
   public ResultModel login(@RequestBody @Validated LoginRequestDTO LoginRequestDTO){
     return ResultModel.success(registerService.login(LoginRequestDTO));
   }
+  
+  @ApiOperation(value="用户登录",notes="用户登录")
+  @RequestMapping(value="/login1",method=RequestMethod.GET)
+  public ResultModel login1(){
+    return ResultModel.success("===============login===================");
+  }
+  
+  
+  @ApiOperation(value="用户登录",notes="用户登录")
+  @RequestMapping(value="/fail",method=RequestMethod.GET)
+  public ResultModel login12(){
+    return ResultModel.success("===============login fail===================");
+  }
 }

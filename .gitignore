@@ -11,3 +11,4 @@
 HELP.md
 lf/*/target/
 pom.properties
+lf/**/log/*
