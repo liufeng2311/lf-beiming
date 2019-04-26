@@ -27,7 +27,6 @@ public class MyUserDetailsService implements UserDetailsService{
   static final Logger logger = LoggerFactory.getLogger(MyUserDetailsService.class);
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    logger.info("===============进入认证======================");
     SysUser sysUser = new SysUser();
     sysUser.setUsername(username);
     SysUser user2 = sysUserMapper.selectOne(sysUser);
@@ -39,7 +38,6 @@ public class MyUserDetailsService implements UserDetailsService{
     }
     String password = passwordEncoder.encode(user2.getPassword());
     User user = new User(username, password,authorities);
-   
     return user;
   }
 

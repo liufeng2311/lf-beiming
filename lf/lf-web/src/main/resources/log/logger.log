@@ -1,75 +1,133 @@
-2019-04-16 13:03:39.212  INFO 10540 --- [restartedMain] com.beiming.WebApplication               : Starting WebApplication on LiuFeng with PID 10540 (E:\lf-beiming\lf\lf-web\target\classes started by LiuFeng in E:\lf-beiming\lf\lf-web)
-2019-04-16 13:03:39.232  INFO 10540 --- [restartedMain] com.beiming.WebApplication               : No active profile set, falling back to default profiles: default
-2019-04-16 13:03:39.361  INFO 10540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-04-16 13:03:39.362  INFO 10540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-04-16 13:03:45.344  WARN 10540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.beiming.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
-2019-04-16 13:03:45.345  WARN 10540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.beiming.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
-2019-04-16 13:03:45.345  WARN 10540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.beiming]' package. Please check your configuration.
-2019-04-16 13:03:45.522  INFO 10540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-04-16 13:03:45.546  INFO 10540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-04-16 13:03:45.719  INFO 10540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
-2019-04-16 13:03:47.128  INFO 10540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6146064f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-16 13:03:47.145  INFO 10540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c8983e15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-16 13:03:47.177  INFO 10540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-16 13:03:47.182  INFO 10540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@673b17b3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-16 13:03:47.186  INFO 10540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$861aa901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-16 13:03:47.191  INFO 10540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-16 13:03:48.111  INFO 10540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
-2019-04-16 13:03:48.190  INFO 10540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-16 13:03:48.191  INFO 10540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-04-16 13:03:48.203  INFO 10540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
-2019-04-16 13:03:48.203  INFO 10540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2019-04-16 13:03:48.203  INFO 10540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2019-04-16 13:03:48.209  INFO 10540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
-2019-04-16 13:03:48.395  INFO 10540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-16 13:03:48.395  INFO 10540 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9033 ms
-2019-04-16 13:03:50.210 TRACE 10540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2019-04-26 13:29:44.670  INFO 6964 --- [restartedMain] com.beiming.WebApplication               : Starting WebApplication on LiuFeng with PID 6964 (E:\lf-beiming\lf\lf-web\target\classes started by LiuFeng in E:\lf-beiming\lf\lf-web)
+2019-04-26 13:29:44.686  INFO 6964 --- [restartedMain] com.beiming.WebApplication               : No active profile set, falling back to default profiles: default
+2019-04-26 13:29:44.925  INFO 6964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-26 13:29:44.929  INFO 6964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-26 13:29:48.564  WARN 6964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.beiming.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2019-04-26 13:29:48.565  WARN 6964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.beiming.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-04-26 13:29:48.565  WARN 6964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.beiming]' package. Please check your configuration.
+2019-04-26 13:29:48.721  INFO 6964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-26 13:29:48.728  INFO 6964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-26 13:29:48.860  INFO 6964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80ms. Found 0 repository interfaces.
+2019-04-26 13:29:49.497  INFO 6964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$aef71ac0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:29:49.519  INFO 6964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$16495286] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:29:49.580  INFO 6964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:29:49.611  INFO 6964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@58fa08d5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:29:49.619  INFO 6964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$d3cbbd72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:29:49.630  INFO 6964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:29:50.426  INFO 6964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-04-26 13:29:50.475  INFO 6964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-26 13:29:50.475  INFO 6964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-26 13:29:50.487  INFO 6964 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-04-26 13:29:50.487  INFO 6964 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-26 13:29:50.488  INFO 6964 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-26 13:29:50.516  INFO 6964 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-04-26 13:29:50.720  INFO 6964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-26 13:29:50.721  INFO 6964 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5792 ms
+2019-04-26 13:29:52.349 TRACE 6964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	c.b.c.LoginController:
 	{POST /login/register}: register(RegisterRequestDTO)
-	{POST /login/login}: login(LoginRequestDTO)
 	{GET /login/fail}: login12()
 	{GET /login/login1}: login1()
-2019-04-16 13:03:50.214 TRACE 10540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	{POST /login/login}: login(LoginRequestDTO)
+2019-04-26 13:29:52.356 TRACE 6964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	c.b.c.UserController:
+	{GET /user/out}: out(HttpServletResponse)
 	{GET /user/admin}: getUserList()
 	{GET /user/user}: getUserList1()
-2019-04-16 13:03:50.214 TRACE 10540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	{ /user/outTest}: outTest(HttpServletResponse)
+2019-04-26 13:29:52.357 TRACE 6964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	c.b.h.ExceptionsHandler:
 	
-2019-04-16 13:03:50.220 TRACE 10540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2019-04-26 13:29:52.362 TRACE 6964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	s.d.s.w.ApiResourceController:
-	{ /swagger-resources/configuration/security}: securityConfiguration()
-	{ /swagger-resources/configuration/ui}: uiConfiguration()
 	{ /swagger-resources}: swaggerResources()
-2019-04-16 13:03:50.224 TRACE 10540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+2019-04-26 13:29:52.366 TRACE 6964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ /error}: error(HttpServletRequest)
 	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
-2019-04-16 13:03:50.232 DEBUG 10540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
-2019-04-16 13:03:52.151  INFO 10540 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-04-16 13:03:52.651  INFO 10540 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-04-16 13:03:52.828  INFO 10540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-04-16 13:03:52.982  INFO 10540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2019-04-16 13:03:52.983  INFO 10540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2019-04-16 13:03:52.984  INFO 10540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2019-04-16 13:03:52.984  INFO 10540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
-2019-04-16 13:03:53.881  INFO 10540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@acbca89, org.springframework.security.web.context.SecurityContextPersistenceFilter@39944d05, org.springframework.security.web.header.HeaderWriterFilter@103c106b, org.springframework.security.web.csrf.CsrfFilter@40369185, org.springframework.security.web.authentication.logout.LogoutFilter@40c06072, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@298b64, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fbb1077, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3b9e8e98, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@30e47101, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@607744eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7622f9e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e12a4e3, org.springframework.security.web.session.SessionManagementFilter@5427e91e, org.springframework.security.web.access.ExceptionTranslationFilter@7f964128, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@14a3bfb4]
-2019-04-16 13:03:54.056  INFO 10540 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-04-16 13:03:54.096  INFO 10540 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-04-16 13:03:54.175  INFO 10540 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-04-16 13:03:54.505  INFO 10540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
-2019-04-16 13:03:54.510  INFO 10540 --- [restartedMain] com.beiming.WebApplication               : Started WebApplication in 16.566 seconds (JVM running for 19.138)
-2019-04-16 13:04:37.462  INFO 10540 --- [http-nio-8099-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1551230596,1551257505,1551320265] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.
-2019-04-16 13:04:37.516  INFO 10540 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-04-16 13:04:37.517  INFO 10540 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-04-16 13:04:37.538  INFO 10540 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
-2019-04-16 13:04:56.896  INFO 10540 --- [http-nio-8099-exec-7] c.beiming.security.MyUserDetailsService  : ===============进入认证======================
-2019-04-16 13:05:01.198  INFO 10540 --- [http-nio-8099-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-04-16 13:05:09.085  INFO 10540 --- [http-nio-8099-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-04-16 13:05:09.144 DEBUG 10540 --- [http-nio-8099-exec-7] c.b.mapper.SysUserMapper.selectOne       : ==>  Preparing: SELECT id,username,password FROM sys_user WHERE username = ? 
-2019-04-16 13:05:09.510 DEBUG 10540 --- [http-nio-8099-exec-7] c.b.mapper.SysUserMapper.selectOne       : ==> Parameters: admin(String)
-2019-04-16 13:05:10.090 DEBUG 10540 --- [http-nio-8099-exec-7] c.b.mapper.SysUserMapper.selectOne       : <==      Total: 1
-2019-04-16 13:05:10.711 DEBUG 10540 --- [http-nio-8099-exec-7] c.b.m.SysUserMapper.getUserPermission    : ==>  Preparing: select u.username userName, u.password password, r.name role, p.name resources from sys_user u left join sys_role_user ru on u.id=ru.sys_user_id left join sys_role r on ru.sys_role_id =r.id left join sys_permission_role pr on pr.role_id=r.id left join sys_permission p on p.id=pr.permission_id where u.id=? 
-2019-04-16 13:05:10.723 DEBUG 10540 --- [http-nio-8099-exec-7] c.b.m.SysUserMapper.getUserPermission    : ==> Parameters: 1(String)
-2019-04-16 13:05:11.246 DEBUG 10540 --- [http-nio-8099-exec-7] c.b.m.SysUserMapper.getUserPermission    : <==      Total: 2
+2019-04-26 13:29:52.377 DEBUG 6964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-26 13:30:23.626  INFO 6964 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-04-26 13:30:24.015  INFO 6964 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-26 13:30:24.157  INFO 6964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-26 13:30:24.345  INFO 6964 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-04-26 13:30:24.347  INFO 6964 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-04-26 13:30:24.348  INFO 6964 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-04-26 13:30:24.348  INFO 6964 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-04-26 13:30:25.429  INFO 6964 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], []
+2019-04-26 13:30:25.488  INFO 6964 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a7b9aee, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e4fe2c0, org.springframework.security.web.header.HeaderWriterFilter@2d1885f6, org.springframework.security.web.csrf.CsrfFilter@349e005b, org.springframework.security.web.authentication.logout.LogoutFilter@46674ed, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e5c984a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@443f6310, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@60afc923, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@433553da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@680984bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51881652, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77079e5c, org.springframework.security.web.session.SessionManagementFilter@489d13b8, org.springframework.security.web.access.ExceptionTranslationFilter@2ad4cbea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b165624]
+2019-04-26 13:30:25.745  INFO 6964 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-26 13:30:25.792  INFO 6964 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-26 13:30:25.872  INFO 6964 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-26 13:30:26.227  INFO 6964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-04-26 13:30:26.232  INFO 6964 --- [restartedMain] com.beiming.WebApplication               : Started WebApplication in 42.614 seconds (JVM running for 44.908)
+2019-04-26 13:30:28.652  INFO 6964 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-26 13:30:28.652  INFO 6964 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-26 13:30:28.661  INFO 6964 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-26 13:30:51.160  INFO 4636 --- [restartedMain] com.beiming.WebApplication               : Starting WebApplication on LiuFeng with PID 4636 (E:\lf-beiming\lf\lf-web\target\classes started by LiuFeng in E:\lf-beiming\lf\lf-web)
+2019-04-26 13:30:51.165  INFO 4636 --- [restartedMain] com.beiming.WebApplication               : No active profile set, falling back to default profiles: default
+2019-04-26 13:30:51.251  INFO 4636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-26 13:30:51.251  INFO 4636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-26 13:30:53.150  WARN 4636 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.beiming.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2019-04-26 13:30:53.150  WARN 4636 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.beiming.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-04-26 13:30:53.150  WARN 4636 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.beiming]' package. Please check your configuration.
+2019-04-26 13:30:53.223  INFO 4636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-26 13:30:53.229  INFO 4636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-26 13:30:53.342  INFO 4636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 0 repository interfaces.
+2019-04-26 13:30:53.946  INFO 4636 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6653a89c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:30:53.967  INFO 4636 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cda5e062] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:30:54.001  INFO 4636 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:30:54.007  INFO 4636 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5d189a3a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:30:54.013  INFO 4636 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$8b284b4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:30:54.017  INFO 4636 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 13:30:54.682  INFO 4636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-04-26 13:30:54.746  INFO 4636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-26 13:30:54.747  INFO 4636 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-26 13:30:54.763  INFO 4636 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-04-26 13:30:54.764  INFO 4636 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-26 13:30:54.765  INFO 4636 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-26 13:30:54.772  INFO 4636 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-04-26 13:30:54.963  INFO 4636 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-26 13:30:54.964  INFO 4636 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3713 ms
+2019-04-26 13:30:56.236 TRACE 4636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.b.c.LoginController:
+	{POST /login/register}: register(RegisterRequestDTO)
+	{POST /login/login}: login(LoginRequestDTO)
+	{GET /login/login1}: login1()
+	{GET /login/fail}: login12()
+2019-04-26 13:30:56.244 TRACE 4636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.b.c.UserController:
+	{GET /user/out}: out(HttpServletResponse)
+	{ /user/outTest}: outTest(HttpServletResponse)
+	{GET /user/user}: getUserList1()
+	{GET /user/admin}: getUserList()
+2019-04-26 13:30:56.245 TRACE 4636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.b.h.ExceptionsHandler:
+	
+2019-04-26 13:30:56.250 TRACE 4636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources}: swaggerResources()
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+2019-04-26 13:30:56.254 TRACE 4636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2019-04-26 13:30:56.263 DEBUG 4636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-26 13:34:10.783  INFO 4636 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-04-26 13:34:14.752  INFO 4636 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-26 13:34:14.834  INFO 4636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-26 13:34:14.980  INFO 4636 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-04-26 13:34:14.981  INFO 4636 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-04-26 13:34:14.982  INFO 4636 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-04-26 13:34:14.982  INFO 4636 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-04-26 13:34:15.423  INFO 4636 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], []
+2019-04-26 13:34:15.495  INFO 4636 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21f3484c, org.springframework.security.web.context.SecurityContextPersistenceFilter@64746665, org.springframework.security.web.header.HeaderWriterFilter@6b22ceb5, org.springframework.security.web.csrf.CsrfFilter@3527e186, org.springframework.security.web.authentication.logout.LogoutFilter@5b74d5ce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6979214d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@90c6caa, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1da83740, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@366d847, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@698426bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@796a15f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@509220b6, org.springframework.security.web.session.SessionManagementFilter@6f8c349f, org.springframework.security.web.access.ExceptionTranslationFilter@67c985dc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f609de9]
+2019-04-26 13:34:15.659  INFO 4636 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-26 13:34:15.685  INFO 4636 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-26 13:34:15.734  INFO 4636 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-26 13:34:16.021  INFO 4636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-04-26 13:34:16.026  INFO 4636 --- [restartedMain] com.beiming.WebApplication               : Started WebApplication in 205.539 seconds (JVM running for 207.053)
+2019-04-26 13:42:37.639  INFO 4636 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-26 13:42:37.647  INFO 4636 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

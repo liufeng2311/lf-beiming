@@ -2,6 +2,8 @@ package com.beiming.handler;
 
 import java.util.List;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -56,11 +58,15 @@ public class ExceptionsHandler {
       }
       return ResultModel.faile(null, builder.toString(), ExceptionEnum.UNKNOW_ERROR.getCode());
 
-    }else if(exception instanceof AccessDeniedException){   //@Valid参数验证异常输出 AccessDeniedException
+    }else if(exception instanceof AccessDeniedException){   //@Valid参数验证异常输出 AccessDeniedException  BadCredentialsException
         String message = ((AccessDeniedException) exception).getMessage();
       return ResultModel.faile(null, message, ExceptionEnum.PERMISSION_DENIED.getCode());
 
-    }else {
+    }else if(exception instanceof AuthenticationException){   //@Valid参数验证异常输出 AccessDeniedException  BadCredentialsException
+      String message = ((AuthenticationException) exception).getMessage();
+    return ResultModel.faile(null, message, ExceptionEnum.PERMISSION_DENIED1.getCode());
+
+  }else {
       ResultModel result = ResultModel.faile(null, ExceptionEnum.UNKNOW_ERROR.getMessage(), ExceptionEnum.UNKNOW_ERROR.getCode());
       exception.printStackTrace();
       return result;

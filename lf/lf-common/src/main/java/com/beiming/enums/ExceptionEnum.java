@@ -12,6 +12,8 @@ public enum ExceptionEnum implements ExceptionInterface{
   REGISTER_FAILE(10001,"注册失败"),
   
   PERMISSION_DENIED(22222,"权限不足，无法访问"),
+  
+  PERMISSION_DENIED1(22222,"用户名或密码错误"),
 
   SUCCESS(200,"SUCESS"), 
   ;
