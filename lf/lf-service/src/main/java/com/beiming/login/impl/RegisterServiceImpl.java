@@ -3,6 +3,8 @@ package com.beiming.login.impl;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import com.beiming.dto.request.LoginRequestDTO;
 import com.beiming.dto.request.RegisterRequestDTO;
@@ -18,6 +20,9 @@ public class RegisterServiceImpl implements RegisterService{
 
   @Autowired
   private UserMapper userMapper;
+  
+  @Autowired
+  RedisTemplate<String, Object> redisTemplate;
   
   @Override
   public User register(RegisterRequestDTO registerRequest){
@@ -37,6 +42,7 @@ public class RegisterServiceImpl implements RegisterService{
   }
   
   @Override
+  @Cacheable(key = "123231")
   public User login(LoginRequestDTO loginRequestDTO){
     User user = new User();
     user.setLoginName(loginRequestDTO.getName());
@@ -46,6 +52,13 @@ public class RegisterServiceImpl implements RegisterService{
       //获取用户的其他信息
     }
     return select.get(0);
+  }
+
+  @Override
+  @Cacheable(value = {"liufeng","lili"} ,key = "123231")
+  public String login1() {
+    redisTemplate.opsForValue().set("feizhujie", "feizhujie");
+    return "redis测试1231";
   }
 
 }

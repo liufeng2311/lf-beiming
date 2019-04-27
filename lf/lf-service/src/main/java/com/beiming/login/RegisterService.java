@@ -21,4 +21,6 @@ public interface RegisterService {
 	 * @throws UserException
 	 */
 	User login(LoginRequestDTO loginRequestDTO); 
+	
+	String login1(); 
 }

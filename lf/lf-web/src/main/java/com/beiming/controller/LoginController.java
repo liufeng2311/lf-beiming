@@ -38,7 +38,7 @@ public class LoginController {
   @ApiOperation(value="用户登录",notes="用户登录")
   @RequestMapping(value="/login1",method=RequestMethod.GET)
   public ResultModel login1(){
-    return ResultModel.success("===============login===================");
+    return ResultModel.success(registerService.login1());
   }
   
   

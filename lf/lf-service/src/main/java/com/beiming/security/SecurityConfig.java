@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     .authenticationProvider(new JWTAuthenticationProvider())
     .authorizeRequests().filterSecurityInterceptorOncePerRequest(true)
     //.antMatchers("/user/admin").access("hasRole('ADMIN')").antMatchers("/user/user").access("hasRole('USER')")
-        .anyRequest().authenticated()
+        .anyRequest().permitAll()
         .and()
     .formLogin()  //是否使用框架为你提供的登录页面http.formLogin().usernameParameter("user").passwordParameter("pwd").loginPage("/userlogin");(设置用户名、密码name)
     .and()
